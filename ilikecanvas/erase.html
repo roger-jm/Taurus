@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>how to erase canves</title>
+        <script type="text/javascript" src="jquery/jquery-2.0.2.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+        	var canvas = $("#mycanvas");
+        	var context = canvas.get(0).getContext("2d");
+        	canvas.attr("width", $(window).get(0).innerWidth);
+        	canvas.attr("height", $(window).get(0).innerHeight);
+        	//context.fillRect(0,0,canvas.width(),canvas.height());
+        	context.fillRect(40,40,100,100);
+        	context.clearRect(0,0,canvas.width(),canvas.height());
+        });
+        </script>
+    </head>
+    
+    <body>
+    	<canvas id="mycanvas" ></canvas>
+    </body>
+</html>

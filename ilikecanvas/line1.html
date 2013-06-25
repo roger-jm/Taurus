@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>basic graph and line</title>
+        <script type="text/javascript" src="jquery/jquery-2.0.2.js"></script>
+        <!--<script type="text/javascript" src="jquery/jquery-1.10.1.js"></script>-->
+        <script type="text/javascript">
+        	$(document).ready(function(){
+        		var canvas = $("#mycanvas");
+        		var context = canvas.get(0).getContext("2d");
+        		//the first two prams are upper left(x,y),and the last two params are width&height
+        		context.fillRect(40,40,100,100);
+        		//opposite for fill
+        		context.strokeRect(150,150,200,100);
+        		//line
+        		context.strokeStyle="rgb(32,111,11)";
+        		context.beginPath();
+        		context.moveTo(150,150); //start
+        		context.lineTo(350,250); //end
+        		context.closePath();
+        		context.stroke(); //draw
+
+        		//circle
+        		context.beginPath();
+        		//style
+        		context.strokeStyle="rgb(255,0,0)";
+        		//arc(x,y,radius,startAngle,endAngle,anti-clock-wise)
+        		context.arc(250,250,100,0,Math.PI*2,false);
+        		context.closePath();
+        		//context.fill();
+        		context.stroke();
+        	}
+        		);
+        </script>
+    </head>
+    
+    <body>
+    	<canvas id="mycanvas" width="500" height="500" ></canvas>
+    </body>
+</html>
